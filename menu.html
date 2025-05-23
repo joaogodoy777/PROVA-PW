@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha ONG - Voluntários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" id="logoLink">Minha ONG</a>
+            <ul>
+                <li><a id="cadastroLink">Cadastro de Voluntários</a></li>
+                <li><a id="listaLink">Lista de Voluntários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="mainContainer">
+        <div id="welcomeSection">
+            <h2>Bem-vindo ao Sistema da ONG!</h2>
+            <p>Selecione uma opção abaixo para gerenciar os voluntários:</p>
+            <div class="menu-options">
+                <a class="menu-button" id="cadastrarVoluntarioBtn">Cadastrar Novo Voluntário</a>
+                <a class="menu-button" id="verListaBtn">Ver Lista de Voluntários</a>
+            </div>
+        </div>
+
+        <div id="registerSection" style="display: none;">
+            <h2>Cadastro de Voluntário</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="input-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required pattern="\d{5}-?\d{3}" title="Formato: 12345-678 ou 12345678">
+                    <div class="error-message" id="cepError"></div>
+                </div>
+                <button type="submit">Finalizar Cadastro</button>
+                <div class="success-message" id="registerSuccessMessage"></div>
+                <button type="button" id="backToMenuFromRegisterBtn" class="menu-button secondary-button">Voltar ao Menu</button>
+            </form>
+        </div>
+
+        <div id="listSection" style="display: none;">
+            <h2>Voluntários Cadastrados</h2>
+            <div id="volunteersCardsContainer" class="cards-container">
+                </div>
+            <p id="noVolunteersMessage" style="display: none;">Nenhum voluntário cadastrado ainda.</p>
+            <button type="button" id="backToMenuFromListBtn" class="menu-button secondary-button">Voltar ao Menu</button>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>

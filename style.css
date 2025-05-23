@@ -1,0 +1,326 @@
+/* Importação de fonte do Google Fonts (Opcional, para um visual mais moderno) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+header {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 35px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+.login-container, 
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 900px; 
+    margin: 50px auto;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #28a745;
+    font-weight: 600;
+}
+
+p {
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+}
+
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 8px;
+    text-align: left;
+    height: 18px;
+    font-weight: 500;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 1.1em;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.register-link,
+.login-link {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.register-link a,
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+.menu-options {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-button {
+    background-color: #007bff;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: block;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.secondary-button {
+    background-color: #6c757d !important; 
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2) !important;
+}
+
+.secondary-button:hover {
+    background-color: #5a6268 !important;
+    box-shadow: 0 6px 15px rgba(108, 117, 125, 0.3) !important;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px; 
+    margin-top: 30px;
+    padding: 10px;
+    justify-content: center; 
+}
+
+.volunteer-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.volunteer-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #28a745;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-card h3 {
+    color: #28a745;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.volunteer-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+    word-wrap: break-word; 
+}
+
+.volunteer-address {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    nav ul li {
+        margin-left: 0;
+    }
+    .container {
+        padding: 25px;
+        margin: 25px auto;
+    }
+    .menu-options {
+        gap: 15px;
+    }
+    .cards-container {
+        grid-template-columns: 1fr; 
+    }
+}
